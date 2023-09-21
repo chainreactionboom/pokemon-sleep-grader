@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <script src="./data.js"></script>
+    <script>
+        console.log(Poke2Type)
+        var l_poke = Object.keys(Poke2Type)
+        l_poke.sort()
+        var l_nature = Object.keys(Nature2Score)
+        l_nature.sort()
+        var l_subskill = Object.keys(Subskill2Score)
+        l_subskill.sort()
+
+        const Score2Grade = [[25, 'F'], [50, 'D'], [70, 'C'], [85, 'B'], [95, 'A'], [100, 'S']]
+
+        
+        function calculate_score() {
+            let pokemon = document.getElementById("list_pokemons").value
+            let nature = document.getElementById("list_natures").value
+            let idx = Poke2Type[pokemon]
+            let score_nature = Nature2Score[nature][idx]
+            let score_subskill = 0
+            // get score
+            for (let ii = 0; ii < 5; ii++) {
+                iv = document.getElementById("list_sub_" + ii).value
+                score_subskill += Subskill2Score[iv][idx] * LevelScaling[ii]
+            }
+            total_score = score_nature + score_subskill
+
+            
+
+            // calculate percentile
+            var percentile_cache = null
+            if (idx == 0) {
+                percentile_cache = PercentileBerry
+            } else if (idx==1) {
+                percentile_cache = PercentileIngredient
+            } else {
+                percentile_cache = PercentileSkill
+            }
+            var pct_ii = 0
+            for (; pct_ii < percentile_cache.length; pct_ii++) {
+                if (percentile_cache[pct_ii]>=total_score) {
+                    break
+                }
+            }
+
+            // get grade 
+            var grade_idx = 0
+            for (let ii = 0; ii < Score2Grade.length; ii++) {
+                grade_idx = ii
+                if (pct_ii <= Score2Grade[ii][0]) {
+                    break;
+                }
+            }
+            grade = Score2Grade[grade_idx][1]
+            
+            // render
+            document.getElementById("score").textContent = total_score
+            document.getElementById("grade").textContent = grade
+            document.getElementById("percentile").textContent = pct_ii+"/100"
+            console.log("Score: " + total_score + " | Grade: " + grade + " | Percentile: "+pct_ii)
+        }
+
+        function render() {
+            for (let ii = 0; ii < l_poke.length; ii++) {
+                var item = document.createElement("option")
+                item.text = l_poke[ii]
+                item.value = l_poke[ii]
+                document.getElementById("list_pokemons").appendChild(item)
+            }
+            for (let ii = 0; ii < l_nature.length; ii++) {
+                var item = document.createElement("option")
+                item.text = l_nature[ii]
+                item.value = l_nature[ii]
+                document.getElementById("list_natures").appendChild(item)
+            }
+            for (let ii = 0; ii < 5; ii++) {
+                for (let jj = 0; jj < l_subskill.length; jj++) {
+                    var item = document.createElement("option")
+                    item.text = l_subskill[jj]
+                    item.value = l_subskill[jj]
+                    document.getElementById("list_sub_" + ii).appendChild(item)
+                }
+            }
+            console.log("Render finished...")
+        }
+    </script>
+</head>
+
+<body onload="render()">
+    <div class="container-fluid mt-3">
+        <h1><img src="https://pokemonsleep.mave.me/logo.png" style="width: 120px;"> Pokemon Sleep Calculator</h1>
+        <!-- <form> -->
+        <div class="mb-3">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-2">
+                            Pokemon:
+                        </div>
+                        <div class="col">
+                            <select id="list_pokemons" class="form-select">
+                                <option disabled selected value> -- select one -- </option>
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            Nature:
+                        </div>
+                        <div class="col">
+                            <select id="list_natures" class="form-select">
+                                <option disabled selected value> -- select one -- </option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    Subskill:
+                    <ul class="list-group">
+                        <li class="list-group-item">
+
+                            <div class="row">
+                                <div class="col-2"> Lv. 10 </div>
+                                <div class="col">
+                                    <select id="list_sub_0" class="form-select">
+                                        <option disabled selected value> -- select one -- </option>
+                                    </select>
+                                </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-2"> Lv. 25 </div>
+                                <div class="col">
+                                    <select id="list_sub_1" class="form-select">
+                                        <option disabled selected value> -- select one -- </option>
+                                    </select>
+                                </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-2"> Lv. 50 </div>
+                                <div class="col">
+                                    <select id="list_sub_2" class="form-select">
+                                        <option disabled selected value> -- select one -- </option>
+                                    </select>
+                                </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-2"> Lv. 75 </div>
+                                <div class="col">
+                                    <select id="list_sub_3" class="form-select">
+                                        <option disabled selected value> -- select one -- </option>
+                                    </select>
+                                </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-2"> Lv. 100 </div>
+                                <div class="col">
+                                    <select id="list_sub_4" class="form-select">
+                                        <option disabled selected value> -- select one -- </option>
+                                    </select>
+                                </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <button type="submit" class="btn btn-primary center" onclick="calculate_score()">Calculate Score</button>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <h4 class="col-auto me-auto">Score:</h4>
+            <h4 class="col" id="score">?</h4>
+            <h4 class="col-auto me-auto">Grade:</h4>
+            <h4 class="col" id="grade">?</h4>
+            <h4 class="col-auto me-auto">Percentile:</h4>
+            <h4 class="col" id="percentile">?</h4>
+        </div>
+        <hr />
+        <footer>
+            Link to the <a href="https://github.com/chainreactionboom/pokemon-sleep-grader">Github</a> page.
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>
