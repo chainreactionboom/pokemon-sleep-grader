@@ -55,7 +55,8 @@ const Poke2Type = {
     'Magnezone': PTYPE.Skill,
     'Togekiss': PTYPE.Skill,
     'Leafeon': PTYPE.Skill, 'Glaceon': PTYPE.Skill, 'Sylveon': PTYPE.Skill,
-	'Mime Jr.': PTYPE.Ingredient, 'Mr. Mime': PTYPE.Ingredient
+	'Mime Jr.': PTYPE.Ingredient, 'Mr. Mime': PTYPE.Ingredient,
+    'Cleffa': PTYPE.Berry, 'Clefairy': PTYPE.Berry, 'Clefable': PTYPE.Berry,
 }
 const Nature2Score = {
     'Hardy': [1.00, 1.00, 1.00], 'Lonely': [1.00, 1.00, 0.67], 'Brave': [1.67, 1.67, 1.67],
