@@ -58,8 +58,10 @@ Poke2Type = {
     'Croagunk': PTYPE.Ingredient, 'Toxicroak': PTYPE.Ingredient,
     'Magnezone': PTYPE.Skill,
     'Togekiss': PTYPE.Skill,
-    'Leafeon': PTYPE.Skill, 'Glaceon': PTYPE.Skill, 'Sylveon': PTYPE.Skill
+    'Leafeon': PTYPE.Skill, 'Glaceon': PTYPE.Skill, 'Sylveon': PTYPE.Skill,
+	'Mime.Jr': PTYPE.Ingredient, 'Mr. Mime': PTYPE.Ingredient
 }
+
 Nature2Score = {
     'Hardy': [1.00, 1.00, 1.00], 'Lonely': [1.00, 1.00, 0.67], 'Brave': [1.67, 1.67, 1.67],
     'Adamant': [3.00, -0.17, 0.67], 'Naughty': [1.83, 1.67, -0.17],
@@ -72,6 +74,7 @@ Nature2Score = {
     'Calm': [-0.67, -0.67, 0.67], 'Gentle': [-0.33, 0.33, 1.33], 'Sassy': [0, 0.25, 1.67],
     'Careful': [1.50, -1.00, 1.33], 'Quirky': [1.00, 1.00, 1.00]
 }
+
 Subskill2Score = {
     'Berry Finding S': [5, 4, 5], 'Dream Shard Bonus': [2, 2, 2],
     'Energy Recovery Bonus': [3, 3, 3], 
@@ -83,6 +86,7 @@ Subskill2Score = {
     'Skill Trigger S': [3, 3, 4], 'Skill Trigger M': [4, 4, 5],
     'Sleep EXP Bonus': [3, 3, 3]
 }
+
 LevelScaling = [1.5, 1.25, 1, 0.75, 0.5]
 
 for idx in range(3):
