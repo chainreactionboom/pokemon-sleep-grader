@@ -120,4 +120,3 @@ const PercentileSkill = [13.  , 13.5 , 13.92, 14.25, 14.42, 14.58, 14.75, 15.  ,
         21.42, 21.58, 21.75, 21.92, 22.08, 22.33, 22.58, 22.92, 23.42,
         26.17]
 
-// export { Poke2Type, Nature2Score, Subskill2Score, LevelScaling };
