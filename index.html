@@ -9,6 +9,7 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
     <script src="./data.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <script>
         console.log(Poke2Type)
         var l_poke = Object.keys(Poke2Type)
@@ -18,19 +19,37 @@
         var l_subskill = Object.keys(Subskill2Score)
         l_subskill.sort()
 
-        const Score2Grade = [[25, 'F'], [50, 'D'], [70, 'C'], [85, 'B'], [95, 'A'], [100, 'S']]
+        const Score2Grade = [
+            [25, 'F'],
+            [50, 'D'],
+            [70, 'C'],
+            [85, 'B'],
+            [95, 'A'],
+            [100, 'S']
+        ]
 
 
         function calculate_score() {
             let pokemon = document.getElementById("list_pokemons").value
             let nature = document.getElementById("list_natures").value
             let idx = Poke2Type[pokemon]
+
+            let explain_str = "Score in detail: "
+
             let score_nature = Nature2Score[nature][idx]
+            explain_str += "[Nature] " + score_nature
             let score_subskill = 0
+
             // get score
+            explain_str += " + [Subskill] "
             for (let ii = 0; ii < 5; ii++) {
                 iv = document.getElementById("list_sub_" + ii).value
-                score_subskill += Subskill2Score[iv][idx] * LevelScaling[ii]
+                let sii = Subskill2Score[iv][idx] * LevelScaling[ii]
+                score_subskill += sii
+                explain_str += sii
+                if (ii != 4) {
+                    explain_str += " + "
+                }
             }
             total_score = score_nature + score_subskill
 
@@ -66,6 +85,7 @@
             document.getElementById("score").textContent = total_score
             document.getElementById("grade").textContent = grade
             document.getElementById("percentile").textContent = pct_ii + "/100"
+            document.getElementById("txt-detail").textContent = explain_str
             console.log("Score: " + total_score + " | Grade: " + grade + " | Percentile: " + pct_ii)
         }
 
@@ -92,6 +112,7 @@
             }
             console.log("Render finished...")
         }
+
     </script>
 </head>
 
@@ -140,6 +161,7 @@
                                                 <option disabled selected value> -- select one -- </option>
                                             </select>
                                         </div>
+                                    </div>
                                 </li>
                                 <li class="list-group-item">
                                     <div class="row">
@@ -149,6 +171,8 @@
                                                 <option disabled selected value> -- select one -- </option>
                                             </select>
                                         </div>
+                                    </div>
+
                                 </li>
                                 <li class="list-group-item">
                                     <div class="row">
@@ -158,6 +182,7 @@
                                                 <option disabled selected value> -- select one -- </option>
                                             </select>
                                         </div>
+                                    </div>
                                 </li>
                                 <li class="list-group-item">
                                     <div class="row">
@@ -167,6 +192,7 @@
                                                 <option disabled selected value> -- select one -- </option>
                                             </select>
                                         </div>
+                                    </div>
                                 </li>
                                 <li class="list-group-item">
                                     <div class="row">
@@ -176,6 +202,7 @@
                                                 <option disabled selected value> -- select one -- </option>
                                             </select>
                                         </div>
+                                    </div>
                                 </li>
                             </ul>
                         </li>
@@ -186,22 +213,34 @@
                         <button type="submit" class="btn btn-primary center" onclick="calculate_score()">Calculate
                             Score</button>
                     </div>
-                </div>
-                <hr />
-                <div class="row">
-                    <h4 class="col-auto me-auto">Score:</h4>
-                    <h4 class="col" id="score">?</h4>
-                    <h4 class="col-auto me-auto">Grade:</h4>
-                    <h4 class="col" id="grade">?</h4>
-                    <h4 class="col-auto me-auto">Percentile:</h4>
-                    <h4 class="col" id="percentile">?</h4>
-                </div>
-                <hr />
 
-                <footer>
-                    Link to the <a href="https://github.com/chainreactionboom/pokemon-sleep-grader">Github</a> page && <a href="https://www.reddit.com/r/PokemonSleep/comments/16p04i7/yet_another_pokemon_sleep_grader/">Reddit</a> post
-                </footer>
+                </div>
             </div>
+            <hr />
+            <div class="row p-4">
+                <h4 class="col-auto me-auto">Score:</h4>
+                <h4 class="col" id="score">?</h4>
+                <h4 class="col-auto me-auto">Grade:</h4>
+                <h4 class="col" id="grade">?</h4>
+                <h4 class="col-auto me-auto">Percentile:</h4>
+                <h4 class="col" id="percentile">?</h4>
+            </div>
+            <hr />
+            <div class="row text-center">
+                <h6 class="col-auto me-auto p-4" id="txt-detail">Score in detail:</h6>
+            </div>
+            <hr />
+            <div class="row text-center">
+                <p class="col-auto me-auto p-2" id="txt-detail">Notes: Each subskill order has multiplier
+                    1.5,1.25,1,0.75,0.5.</p>
+            </div>
+            <hr />
+
+            <footer>
+                Link to the <a href="https://github.com/chainreactionboom/pokemon-sleep-grader">Github</a> page and <a
+                    href="https://www.reddit.com/r/PokemonSleep/comments/16p04i7/yet_another_pokemon_sleep_grader/">Reddit</a>
+                post
+            </footer>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
