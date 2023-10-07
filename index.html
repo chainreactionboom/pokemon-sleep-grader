@@ -120,24 +120,36 @@
     <div class="container-fluid mt-3 mb-3">
         <div class="row justify-content-center">
             <div class="col-md-8" style="max-width: 700px;">
-                <h1><img src="https://pokemonsleep.mave.me/logo.png" style="width: 120px;"> Pokemon Sleep Grader
-                </h1>
+                <h2 class="text-center p-2"><img src="https://pokemonsleep.mave.me/logo.png" style="width: 60px;">
+                    Pokemon Sleep Grader
+                </h2>
                 <!-- <form> -->
                 <div class="mb-3">
                     <ul class="list-group">
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col-2">
+                                <div class="col text-center">
                                     Pokemon:
                                 </div>
+                                <div class="col text-center">
+                                    Nature:
+                                </div>
+
+                            </div>
+                            <div class="row">
                                 <div class="col">
                                     <select id="list_pokemons" class="form-select">
                                         <option disabled selected value> -- select one -- </option>
                                     </select>
                                 </div>
+                                <div class="col">
+                                    <select id="list_natures" class="form-select">
+                                        <option disabled selected value> -- select one -- </option>
+                                    </select>
+                                </div>
                             </div>
                         </li>
-                        <li class="list-group-item">
+                        <!-- <li class="list-group-item">
                             <div class="row">
                                 <div class="col-2">
                                     Nature:
@@ -148,14 +160,14 @@
                                     </select>
                                 </div>
                             </div>
-                        </li>
+                        </li> -->
                         <li class="list-group-item">
                             Subskill:
                             <ul class="list-group">
                                 <li class="list-group-item">
 
                                     <div class="row">
-                                        <div class="col-2"> Lv. 10 </div>
+                                        <div class="col-2"> Lv.10 </div>
                                         <div class="col">
                                             <select id="list_sub_0" class="form-select">
                                                 <option disabled selected value> -- select one -- </option>
@@ -165,7 +177,7 @@
                                 </li>
                                 <li class="list-group-item">
                                     <div class="row">
-                                        <div class="col-2"> Lv. 25 </div>
+                                        <div class="col-2"> Lv.25 </div>
                                         <div class="col">
                                             <select id="list_sub_1" class="form-select">
                                                 <option disabled selected value> -- select one -- </option>
@@ -176,7 +188,7 @@
                                 </li>
                                 <li class="list-group-item">
                                     <div class="row">
-                                        <div class="col-2"> Lv. 50 </div>
+                                        <div class="col-2"> Lv.50 </div>
                                         <div class="col">
                                             <select id="list_sub_2" class="form-select">
                                                 <option disabled selected value> -- select one -- </option>
@@ -186,7 +198,7 @@
                                 </li>
                                 <li class="list-group-item">
                                     <div class="row">
-                                        <div class="col-2"> Lv. 75 </div>
+                                        <div class="col-2"> Lv.75 </div>
                                         <div class="col">
                                             <select id="list_sub_3" class="form-select">
                                                 <option disabled selected value> -- select one -- </option>
@@ -196,7 +208,7 @@
                                 </li>
                                 <li class="list-group-item">
                                     <div class="row">
-                                        <div class="col-2"> Lv. 100 </div>
+                                        <div class="col-2"> Lv.100 </div>
                                         <div class="col">
                                             <select id="list_sub_4" class="form-select">
                                                 <option disabled selected value> -- select one -- </option>
@@ -217,13 +229,31 @@
                 </div>
 
                 <hr />
-                <div class="row p-2">
+                <!-- <div class="row p-2">
                     <h4 class="col-auto me-auto">Score:</h4>
                     <h4 class="col" id="score">?</h4>
                     <h4 class="col-auto me-auto">Grade:</h4>
                     <h4 class="col" id="grade">?</h4>
                     <h4 class="col-auto me-auto">Percentile:</h4>
                     <h4 class="col" id="percentile">?</h4>
+                </div> -->
+                <div>
+                    <table class="table text-center table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="col-4 h4">Score</th>
+                                <th scope="col" class="col-4 h4">Grade</th>
+                                <th scope="col" class="col-4 h4">Percentile</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="score" class="h4">?</td>
+                                <td id="grade" class="h4">?</td>
+                                <td id="percentile" class="h4">?</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <hr />
                 <div class="row text-center">
