@@ -8,13 +8,14 @@ class PTYPE:
     Skill=2
 
 Poke2Type = {
-    'Bulbasaur': PTYPE.Ingredient, 'Ivysaur': PTYPE.Ingredient, 'Venasaur': PTYPE.Ingredient,
+    'Bulbasaur': PTYPE.Ingredient, 'Ivysaur': PTYPE.Ingredient, 'Venusaur': PTYPE.Ingredient,
     'Charmander': PTYPE.Ingredient, 'Charmeleon': PTYPE.Ingredient, 'Charizard': PTYPE.Ingredient,
     'Squirtle': PTYPE.Ingredient, 'Wartortle': PTYPE.Ingredient, 'Blastoise': PTYPE.Ingredient,
     'Caterpie': PTYPE.Berry, 'Metapod': PTYPE.Berry, 'Butterfree': PTYPE.Berry,
     'Rattata': PTYPE.Berry, 'Raticate': PTYPE.Berry,
     'Ekans': PTYPE.Berry, 'Arbok': PTYPE.Berry,
     'Pikachu': PTYPE.Berry, 'Raichu': PTYPE.Berry,
+    'Clefairy': PTYPE.Berry, 'Clefable': PTYPE.Berry,
     'Jigglypuff': PTYPE.Skill, 'Wigglytuff': PTYPE.Skill,
     'Diglett': PTYPE.Ingredient, 'Dugtrio': PTYPE.Ingredient,
     'Meowth': PTYPE.Skill, 'Persian': PTYPE.Skill,
@@ -29,6 +30,7 @@ Poke2Type = {
     'Gastly': PTYPE.Ingredient, 'Haunter': PTYPE.Ingredient, 'Gengar': PTYPE.Ingredient,
     'Cubone': PTYPE.Berry, 'Marowak': PTYPE.Berry,
     'Kangaskhan': PTYPE.Ingredient,
+    'Mr. Mime': PTYPE.Ingredient,
     'Pinsir': PTYPE.Ingredient,
     'Ditto': PTYPE.Ingredient,
     'Eevee': PTYPE.Skill, 'Vaporeon': PTYPE.Skill, 'Jolteon': PTYPE.Skill, 'Flareon': PTYPE.Skill,
@@ -36,6 +38,7 @@ Poke2Type = {
     'Cyndaquil': PTYPE.Berry, 'Quilava': PTYPE.Berry, 'Typhlosion': PTYPE.Berry,
     'Totodile': PTYPE.Berry, 'Croconaw': PTYPE.Berry, 'Feraligatr': PTYPE.Berry,
     'Pichu': PTYPE.Berry,
+    'Cleffa': PTYPE.Berry,
     'Igglybuff': PTYPE.Skill,
     'Togepi': PTYPE.Skill, 'Togetic': PTYPE.Skill,
     'Mareep': PTYPE.Skill, 'Flaaffy': PTYPE.Skill, 'Ampharos': PTYPE.Skill,
@@ -50,16 +53,18 @@ Poke2Type = {
     'Sableye': PTYPE.Skill,
     'Gulpin': PTYPE.Skill, 'Swalot': PTYPE.Skill,
     'Swablu': PTYPE.Berry, 'Altaria': PTYPE.Berry,
+    'Shuppet': PTYPE.Berry, 'Banette': PTYPE.Berry,
     'Absol': PTYPE.Ingredient,
     'Wynaut': PTYPE.Skill,
     'Spheal': PTYPE.Berry, 'Sealeo': PTYPE.Berry, 'Walrein': PTYPE.Berry,
     'Bonsly': PTYPE.Skill,
+    'Mime Jr.': PTYPE.Ingredient,
     'Riolu': PTYPE.Skill, 'Lucario': PTYPE.Skill,
     'Croagunk': PTYPE.Ingredient, 'Toxicroak': PTYPE.Ingredient,
     'Magnezone': PTYPE.Skill,
     'Togekiss': PTYPE.Skill,
-    'Leafeon': PTYPE.Skill, 'Glaceon': PTYPE.Skill, 'Sylveon': PTYPE.Skill,
-	'Mime.Jr': PTYPE.Ingredient, 'Mr. Mime': PTYPE.Ingredient
+    'Leafeon': PTYPE.Skill, 'Glaceon': PTYPE.Skill,
+    'Sylveon': PTYPE.Skill,
 }
 
 Nature2Score = {
@@ -77,7 +82,7 @@ Nature2Score = {
 
 Subskill2Score = {
     'Berry Finding S': [5, 4, 5], 'Dream Shard Bonus': [2, 2, 2],
-    'Energy Recovery Bonus': [3, 3, 3], 
+    'Energy Recovery Bonus': [3, 3, 3],
     'Helping Bonus': [5, 5, 5], 'Helping Speed S': [3, 3, 3], 'Helping Speed M': [4, 4, 4],
     'Ingredient Finder S': [1, 4, 3], 'Ingredient Finder M': [1, 5, 4],
     'Inventory Up S': [2, 3, 2], 'Inventory Up M': [3, 4, 3], 'Inventory Up L': [4, 5, 4],
