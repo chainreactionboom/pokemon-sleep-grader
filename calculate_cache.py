@@ -2,10 +2,12 @@
 import itertools
 import numpy as np
 
+
 class PTYPE:
-    Berry=0
-    Ingredient=1
-    Skill=2
+    Berry = 0
+    Ingredient = 1
+    Skill = 2
+
 
 Poke2Type = {
     'Bulbasaur': PTYPE.Ingredient, 'Ivysaur': PTYPE.Ingredient, 'Venusaur': PTYPE.Ingredient,
@@ -49,6 +51,7 @@ Poke2Type = {
     'Wobbuffet': PTYPE.Skill,
     'Steelix': PTYPE.Berry,
     'Heracross': PTYPE.Skill,
+    'Delibird': PTYPE.Ingredient,
     'Houndour': PTYPE.Berry, 'Houndoom': PTYPE.Berry,
     'Larvitar': PTYPE.Ingredient, 'Pupitar': PTYPE.Ingredient, 'Tyranitar': PTYPE.Ingredient,
     'Slakoth': PTYPE.Berry, 'Vigoroth': PTYPE.Berry, 'Slaking': PTYPE.Berry,
@@ -63,6 +66,7 @@ Poke2Type = {
     'Mime Jr.': PTYPE.Ingredient,
     'Riolu': PTYPE.Skill, 'Lucario': PTYPE.Skill,
     'Croagunk': PTYPE.Ingredient, 'Toxicroak': PTYPE.Ingredient,
+    'Snover': PTYPE.Ingredient, 'Abomasnow': PTYPE.Ingredient,
     'Magnezone': PTYPE.Skill,
     'Togekiss': PTYPE.Skill,
     'Leafeon': PTYPE.Skill, 'Glaceon': PTYPE.Skill,
@@ -101,7 +105,8 @@ for idx in range(3):
     for nn in Nature2Score:
         for ss in itertools.permutations(Subskill2Score, r=5):
             score = Nature2Score[nn][idx]
-            score += sum(Subskill2Score[si][idx] * LevelScaling[ii] for (ii,si) in enumerate(ss))
+            score += sum(Subskill2Score[si][idx] * LevelScaling[ii]
+                         for (ii, si) in enumerate(ss))
             all_scores.append(score)
     all_scores = np.array(all_scores)
     print(np.percentile(all_scores, range(1, 101, 1)))
