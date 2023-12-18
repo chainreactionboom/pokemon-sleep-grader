@@ -45,6 +45,7 @@ const Poke2Type = {
     'Wobbuffet': PTYPE.Skill,
     'Steelix': PTYPE.Berry,
     'Heracross': PTYPE.Skill,
+    'Delibird': PTYPE.Ingredient,
     'Houndour': PTYPE.Berry, 'Houndoom': PTYPE.Berry,
     'Larvitar': PTYPE.Ingredient, 'Pupitar': PTYPE.Ingredient, 'Tyranitar': PTYPE.Ingredient,
     'Slakoth': PTYPE.Berry, 'Vigoroth': PTYPE.Berry, 'Slaking': PTYPE.Berry,
@@ -59,6 +60,7 @@ const Poke2Type = {
     'Mime Jr.': PTYPE.Ingredient,
     'Riolu': PTYPE.Skill, 'Lucario': PTYPE.Skill,
     'Croagunk': PTYPE.Ingredient, 'Toxicroak': PTYPE.Ingredient,
+    'Snover': PTYPE.Ingredient, 'Abomasnow': PTYPE.Ingredient,
     'Magnezone': PTYPE.Skill,
     'Togekiss': PTYPE.Skill,
     'Leafeon': PTYPE.Skill, 'Glaceon': PTYPE.Skill,
@@ -125,4 +127,3 @@ const PercentileSkill = [13.  , 13.5 , 13.92, 14.25, 14.42, 14.58, 14.75, 15.  ,
         20.5 , 20.58, 20.67, 20.75, 20.92, 21.  , 21.08, 21.17, 21.33,
         21.42, 21.58, 21.75, 21.92, 22.08, 22.33, 22.58, 22.92, 23.42,
         26.17]
-
