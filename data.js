@@ -11,6 +11,8 @@ const Poke2Type = {
     'Rattata': PTYPE.Berry, 'Raticate': PTYPE.Berry,
     'Ekans': PTYPE.Berry, 'Arbok': PTYPE.Berry,
     'Pikachu': PTYPE.Berry, 'Raichu': PTYPE.Berry,
+    'Pikachu - Halloween': PTYPE.Berry,
+    'Pikachu - Holiday': PTYPE.Skill,
     'Clefairy': PTYPE.Berry, 'Clefable': PTYPE.Berry,
     'Jigglypuff': PTYPE.Skill, 'Wigglytuff': PTYPE.Skill,
     'Diglett': PTYPE.Ingredient, 'Dugtrio': PTYPE.Ingredient,
