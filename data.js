@@ -33,6 +33,7 @@ const Poke2Type = {
     'Pinsir': PTYPE.Ingredient,
     'Ditto': PTYPE.Ingredient,
     'Eevee': PTYPE.Skill, 'Vaporeon': PTYPE.Skill, 'Jolteon': PTYPE.Skill, 'Flareon': PTYPE.Skill,
+    'Dratini': PTYPE.Ingredient, 'Dragonair': PTYPE.Ingredient, 'Dragonite': PTYPE.Ingredient,
     'Chikorita': PTYPE.Berry, 'Bayleef': PTYPE.Berry, 'Meganium': PTYPE.Berry,
     'Cyndaquil': PTYPE.Berry, 'Quilava': PTYPE.Berry, 'Typhlosion': PTYPE.Berry,
     'Totodile': PTYPE.Berry, 'Croconaw': PTYPE.Berry, 'Feraligatr': PTYPE.Berry,
@@ -50,6 +51,7 @@ const Poke2Type = {
     'Delibird': PTYPE.Ingredient,
     'Houndour': PTYPE.Berry, 'Houndoom': PTYPE.Berry,
     'Larvitar': PTYPE.Ingredient, 'Pupitar': PTYPE.Ingredient, 'Tyranitar': PTYPE.Ingredient,
+    'Ralts': PTYPE.Skill, 'Kirlia': PTYPE.Skill, 'Gardevoir': PTYPE.Skill,
     'Slakoth': PTYPE.Berry, 'Vigoroth': PTYPE.Berry, 'Slaking': PTYPE.Berry,
     'Sableye': PTYPE.Skill,
     'Gulpin': PTYPE.Skill, 'Swalot': PTYPE.Skill,
@@ -66,7 +68,9 @@ const Poke2Type = {
     'Magnezone': PTYPE.Skill,
     'Togekiss': PTYPE.Skill,
     'Leafeon': PTYPE.Skill, 'Glaceon': PTYPE.Skill,
+    'Gallade': PTYPE.Skill,
     'Sylveon': PTYPE.Skill,
+    'Stufful': PTYPE.Ingredient, 'Bewear': PTYPE.Ingredient,
 }
 const Nature2Score = {
     'Hardy': [1.00, 1.00, 1.00], 'Lonely': [1.00, 1.00, 0.67], 'Brave': [1.67, 1.67, 1.67],
