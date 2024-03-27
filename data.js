@@ -71,7 +71,7 @@ const Poke2Type = {
     'Gallade': PTYPE.Skill,
     'Sylveon': PTYPE.Skill,
     'Stufful': PTYPE.Ingredient, 'Bewear': PTYPE.Ingredient,
-    'Dedenne': PTYPE.Skill,
+    'Dedenne': PTYPE.Skill, 'Raikou': PTYPE.Skill
 }
 const Nature2Score = {
     'Hardy': [1.00, 1.00, 1.00], 'Lonely': [1.00, 1.00, 0.67], 'Brave': [1.67, 1.67, 1.67],
