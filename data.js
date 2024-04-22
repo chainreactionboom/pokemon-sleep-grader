@@ -50,6 +50,7 @@ const Poke2Type = {
     'Heracross': PTYPE.Skill,
     'Delibird': PTYPE.Ingredient,
     'Houndour': PTYPE.Berry, 'Houndoom': PTYPE.Berry,
+    'Raikou': PTYPE.Skill,
     'Larvitar': PTYPE.Ingredient, 'Pupitar': PTYPE.Ingredient, 'Tyranitar': PTYPE.Ingredient,
     'Ralts': PTYPE.Skill, 'Kirlia': PTYPE.Skill, 'Gardevoir': PTYPE.Skill,
     'Slakoth': PTYPE.Berry, 'Vigoroth': PTYPE.Berry, 'Slaking': PTYPE.Berry,
@@ -70,8 +71,9 @@ const Poke2Type = {
     'Leafeon': PTYPE.Skill, 'Glaceon': PTYPE.Skill,
     'Gallade': PTYPE.Skill,
     'Sylveon': PTYPE.Skill,
+    'Dedenne': PTYPE.Skill,
     'Stufful': PTYPE.Ingredient, 'Bewear': PTYPE.Ingredient,
-    'Dedenne': PTYPE.Skill, 'Raikou': PTYPE.Skill
+    'Comfey': PTYPE.Ingredient
 }
 const Nature2Score = {
     'Hardy': [1.00, 1.00, 1.00], 'Lonely': [1.00, 1.00, 0.67], 'Brave': [1.67, 1.67, 1.67],
