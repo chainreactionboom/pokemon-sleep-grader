@@ -14,6 +14,7 @@ const Poke2Type = {
     'Pikachu - Halloween': PTYPE.Berry,
     'Pikachu - Holiday': PTYPE.Skill,
     'Clefairy': PTYPE.Berry, 'Clefable': PTYPE.Berry,
+    'Vulpix': PTYPE.Berry, 'Ninetales': PTYPE.Berry,
     'Jigglypuff': PTYPE.Skill, 'Wigglytuff': PTYPE.Skill,
     'Diglett': PTYPE.Ingredient, 'Dugtrio': PTYPE.Ingredient,
     'Meowth': PTYPE.Skill, 'Persian': PTYPE.Skill,
@@ -51,6 +52,7 @@ const Poke2Type = {
     'Delibird': PTYPE.Ingredient,
     'Houndour': PTYPE.Berry, 'Houndoom': PTYPE.Berry,
     'Raikou': PTYPE.Skill,
+    'Entei': PTYPE.Skill,
     'Larvitar': PTYPE.Ingredient, 'Pupitar': PTYPE.Ingredient, 'Tyranitar': PTYPE.Ingredient,
     'Ralts': PTYPE.Skill, 'Kirlia': PTYPE.Skill, 'Gardevoir': PTYPE.Skill,
     'Slakoth': PTYPE.Berry, 'Vigoroth': PTYPE.Berry, 'Slaking': PTYPE.Berry,
@@ -73,8 +75,7 @@ const Poke2Type = {
     'Sylveon': PTYPE.Skill,
     'Dedenne': PTYPE.Skill,
     'Stufful': PTYPE.Ingredient, 'Bewear': PTYPE.Ingredient,
-    'Comfey': PTYPE.Ingredient, 
-    'Vulpix': PTYPE.Berry, 'Ninetales': PTYPE.Berry
+    'Comfey': PTYPE.Ingredient
 }
 const Nature2Score = {
     'Hardy': [1.00, 1.00, 1.00], 'Lonely': [1.00, 1.00, 0.67], 'Brave': [1.67, 1.67, 1.67],
