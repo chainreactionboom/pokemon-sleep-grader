@@ -81,7 +81,8 @@ Poke2Type = {
     'Sylveon': PTYPE.Skill,
     'Dedenne': PTYPE.Skill,
     'Stufful': PTYPE.Ingredient, 'Bewear': PTYPE.Ingredient,
-    'Comfey': PTYPE.Ingredient
+    'Comfey': PTYPE.Ingredient,
+    'Cramorant': PTYPE.Ingredient
 }
 
 Nature2Score = {
