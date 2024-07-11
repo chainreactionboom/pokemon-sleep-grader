@@ -76,7 +76,10 @@ const Poke2Type = {
     'Dedenne': PTYPE.Skill,
     'Stufful': PTYPE.Ingredient, 'Bewear': PTYPE.Ingredient,
     'Comfey': PTYPE.Ingredient,
-    'Cramorant': PTYPE.Ingredient
+    'Cramorant': PTYPE.Ingredient,
+    'Sprigatito': PTYPE.Ingredient, 'Floragato': PTYPE.Ingredient, 'Meowscarada': PTYPE.Ingredient,
+    'Fuecoco': PTYPE.Ingredient, 'Crocalor': PTYPE.Ingredient, 'Skeledirge': PTYPE.Ingredient,
+    'Quaxly': PTYPE.Ingredient, 'Quaxwell': PTYPE.Ingredient, 'Quaquaval': PTYPE.Ingredient
 }
 const Nature2Score = {
     'Hardy': [1.00, 1.00, 1.00], 'Lonely': [1.00, 1.00, 0.67], 'Brave': [1.67, 1.67, 1.67],

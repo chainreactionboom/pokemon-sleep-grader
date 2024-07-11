@@ -82,7 +82,10 @@ Poke2Type = {
     'Dedenne': PTYPE.Skill,
     'Stufful': PTYPE.Ingredient, 'Bewear': PTYPE.Ingredient,
     'Comfey': PTYPE.Ingredient,
-    'Cramorant': PTYPE.Ingredient
+    'Cramorant': PTYPE.Ingredient,
+    'Sprigatito': PTYPE.Ingredient, 'Floragato': PTYPE.Ingredient, 'Meowscarada': PTYPE.Ingredient,
+    'Fuecoco': PTYPE.Ingredient, 'Crocalor': PTYPE.Ingredient, 'Skeledirge': PTYPE.Ingredient,
+    'Quaxly': PTYPE.Ingredient, 'Quaxwell': PTYPE.Ingredient, 'Quaquaval': PTYPE.Ingredient
 }
 
 Nature2Score = {
