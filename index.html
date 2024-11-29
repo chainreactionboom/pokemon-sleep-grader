@@ -11,13 +11,14 @@
     <script src="./data.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <script>
-        console.log(Poke2Type)
         var l_poke = Object.keys(Poke2Type)
         l_poke.sort()
         var l_nature = Object.keys(Nature2Score)
         l_nature.sort()
         var l_subskill = Object.keys(Subskill2Score)
         l_subskill.sort()
+        var l_poke_types = Object.keys(PTYPE)
+        l_poke_types.sort()
 
         const Score2Grade = [
             [25, 'F'],
@@ -30,10 +31,11 @@
 
 
         function calculate_score() {
-            let pokemon = document.getElementById("list_pokemons").value
+            // let pokemon = document.getElementById("list_pokemons").value
+            // let idx = Poke2Type[pokemon]
             let nature = document.getElementById("list_natures").value
-            let idx = Poke2Type[pokemon]
-
+            let poketype = document.getElementById("list_pokemon_types").value
+            let idx = PTYPE[poketype]
             let explain_str = "Score in detail: "
 
             let score_nature = Nature2Score[nature][idx]
@@ -90,11 +92,17 @@
         }
 
         function render() {
-            for (let ii = 0; ii < l_poke.length; ii++) {
+            // for (let ii = 0; ii < l_poke.length; ii++) {
+            //     var item = document.createElement("option")
+            //     item.text = l_poke[ii]
+            //     item.value = l_poke[ii]
+            //     document.getElementById("list_pokemons").appendChild(item)
+            // }
+            for (let ii = 0; ii < l_poke_types.length; ii++) {
                 var item = document.createElement("option")
-                item.text = l_poke[ii]
-                item.value = l_poke[ii]
-                document.getElementById("list_pokemons").appendChild(item)
+                item.text = l_poke_types[ii]
+                item.value = l_poke_types[ii]
+                document.getElementById("list_pokemon_types").appendChild(item)
             }
             for (let ii = 0; ii < l_nature.length; ii++) {
                 var item = document.createElement("option")
@@ -128,8 +136,11 @@
                     <ul class="list-group">
                         <li class="list-group-item">
                             <div class="row">
-                                <div class="col text-center">
+                                <!-- <div class="col text-center">
                                     <strong>Pokemon:</strong>
+                                </div> -->
+                                <div class="col text-center">
+                                    <strong>Pokemon Type:</strong>
                                 </div>
                                 <div class="col text-center">
                                     <strong>Nature:</strong>
@@ -138,7 +149,10 @@
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <select id="list_pokemons" class="form-select">
+                                    <!-- <select id="list_pokemons" class="form-select">
+                                        <option disabled selected value> -- select one -- </option>
+                                    </select> -->
+                                    <select id="list_pokemon_types" class="form-select">
                                         <option disabled selected value> -- select one -- </option>
                                     </select>
                                 </div>
